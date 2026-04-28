@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\Pankaj\Desktop\medical_insurance_project_v2\medical_insurance_project_v2\mlruns/700483340618634979/4c552beaea4b48af955e0648b8fde3dd/artifacts
+end_time: 1777363052716
+entry_point_name: ''
+experiment_id: '700483340618634979'
+lifecycle_stage: active
+run_id: 4c552beaea4b48af955e0648b8fde3dd
+run_name: ridge
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777363051210
+status: 3
+tags: []
+user_id: Pankaj

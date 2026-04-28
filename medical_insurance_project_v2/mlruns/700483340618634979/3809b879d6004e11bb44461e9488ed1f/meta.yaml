@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\Pankaj\Desktop\medical_insurance_project_v2\medical_insurance_project_v2\mlruns/700483340618634979/3809b879d6004e11bb44461e9488ed1f/artifacts
+end_time: 1777363055788
+entry_point_name: ''
+experiment_id: '700483340618634979'
+lifecycle_stage: active
+run_id: 3809b879d6004e11bb44461e9488ed1f
+run_name: rf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777363054320
+status: 3
+tags: []
+user_id: Pankaj

@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\Pankaj\Desktop\medical_insurance_project_v2\medical_insurance_project_v2\mlruns/700483340618634979/064999a880cd4c53bb97b2d17d270785/artifacts
+end_time: 1777363054309
+entry_point_name: ''
+experiment_id: '700483340618634979'
+lifecycle_stage: active
+run_id: 064999a880cd4c53bb97b2d17d270785
+run_name: lasso
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777363052727
+status: 3
+tags: []
+user_id: Pankaj

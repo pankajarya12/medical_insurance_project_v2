@@ -1,0 +1,22 @@
+{
+  "name": "linear",
+  "version": 1,
+  "algorithm": "linear",
+  "metrics": {
+    "r2": 0.9557677972027114,
+    "mae": 1883.659104477612,
+    "rmse": 2425.609979131115,
+    "cv_r2_mean": 0.9504488016237899
+  },
+  "params": {
+    "copy_X": "True",
+    "fit_intercept": "True",
+    "n_jobs": "None",
+    "positive": "False"
+  },
+  "feature_count": 10,
+  "rows_trained_on": 1338,
+  "dataset": "medical_insurance.csv",
+  "created_at": "2026-04-28 13:27:36",
+  "model_id": "9e707558b7fb"
+}
