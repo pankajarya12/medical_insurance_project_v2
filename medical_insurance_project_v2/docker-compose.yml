@@ -1,0 +1,30 @@
+# One command to rule them all:  docker compose up
+services:
+
+  trainer:
+    build: .
+    command: bash -lc "python -m src.eda && python -m src.train && python -m src.report"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+      - ./mlruns:/app/mlruns
+      - ./app/eda_images:/app/app/eda_images
+
+  app:
+    build: .
+    depends_on: [trainer]
+    ports: ["8501:8501"]
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+      - ./mlruns:/app/mlruns
+      - ./app/eda_images:/app/app/eda_images
+
+  mlflow:
+    build: .
+    command: mlflow ui --host 0.0.0.0 --port 5000 --backend-store-uri file:/app/mlruns
+    ports: ["5000:5000"]
+    volumes:
+      - ./mlruns:/app/mlruns

@@ -1,0 +1,22 @@
+# Slim Python base + system libs needed by xgboost / matplotlib
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential libgomp1 curl && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 8501 5000
+
+# default = streamlit (overridden by docker-compose for mlflow service)
+CMD ["streamlit", "run", "app/streamlit_app.py", \
+     "--server.address=0.0.0.0", "--server.port=8501"]
